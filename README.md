@@ -13,7 +13,7 @@ An A* Path Finder algorithm computes the shortest distance between a starting po
 ## How does the algorithm work?
 The A* algorithm works as an informed search, meaning it will take into account where the end "goal" is while it computes the shortest path from start to finish. The algorithm can be represented by the following function:
 
-                                                          F(n) = g(n) + h(n)
+                                                    F(n) = g(n) + h(n)
 where g(n) is the cost to reach from the starting cell on the grid, to cell n (where n is/are the adjacent blocks of the starting point). h(n) represents a heuristic function that estimates the cost of the shortest path from block n to the goal/finish block. This is computed in terms of Manhattan distance, where in simpler terms, it is the vertical and horizontal distance from the starting block to the ending block.
 
 Essentially, this algorithm works by computing the distance from start -> n (this is where g(n) is applied), then from n -> end (this is where h(n) is applied). The sum of g(n) and h(n) is the total path/cost to reach from start -> end, denoted by F(n).
